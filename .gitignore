@@ -31,3 +31,4 @@ build/
 # Ignore uploads (if storing files locally)
 uploads/
 
+public/

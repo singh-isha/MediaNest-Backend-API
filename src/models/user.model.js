@@ -43,10 +43,13 @@ const UserSchema = new mongoose.Schema(
     ],
     password: {
       type: String,
-      required: [true, "Password is required"],
+      required: [
+        true,
+        "Password is required and should contain atleast 6 characters",
+      ],
     },
     refreshToken: {
-      type: string,
+      type: String,
     },
   },
   { timestamps: true },
@@ -95,4 +98,4 @@ UserSchema.methods.generateRefreshToken = function () {
 };
 
 
-export const User = mongoose.model('User', UserSchema);
+export const User = mongoose.model("User", UserSchema);
